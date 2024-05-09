@@ -1,13 +1,27 @@
 <?xml version="1.0"?>
-<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN"
-"http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
+<!DOCTYPE module PUBLIC "-//Puppy Crawl//DTD Check Configuration 1.2//EN" "http://www.puppycrawl.com/dtds/configuration_1_2.dtd">
 
 <module name="Checker">
+  <!--MODULO HEADER -->
   <module name="Header">
     <property name="headerFile" value="LICENSE.txt"/>
     <property name="fileExtensions" value="java"/>
   </module>
+  <!--MODULI CYCLOMATIC COMPLEXITY, EMPTY CATCH BLOCK, AVOID STAR IMPORT, NEED BRACES-->
+  <module name="TreeWalker">
+    <module name="CyclomaticComplexity"/>
+    <module name="EmptyCatchBlock"/>
+    <module name="AvoidStarImport"/>
+    <module name="NeedBraces"/>
+  </module>
+  <!--MODULO LINE LENGTH -->
+  <module name="LineLength">
+    <property name="fileExtensions" value="java"/>
+  </module>
+  <!--MODULO EMPTY CATCH BLOCK -->
+
 </module>
+
 
 <!--
 <module name="Checker">
