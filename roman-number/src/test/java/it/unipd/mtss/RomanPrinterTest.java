@@ -8,47 +8,47 @@ public class RomanPrinterTest {
     @Test
     public void testPrint_basicSymbols() {
         String I = "  _____  \n" +
-                " |_   _| \n" +
-                "   | |   \n" +
-                "   | |   \n" +
-                "  _| |_  \n" +
-                " |_____| \n";
+                   " |_   _| \n" +
+                   "   | |   \n" +
+                   "   | |   \n" +
+                   "  _| |_  \n" +
+                   " |_____| \n";
         String V = " __      __ \n" +
-                " \\ \\    / / \n" +
-                "  \\ \\  / /  \n" +
-                "   \\ \\/ /   \n" +
-                "    \\  /    \n" +
-                "     \\/     \n";
+                   " \\ \\    / / \n" +
+                   "  \\ \\  / /  \n" +
+                   "   \\ \\/ /   \n" +
+                   "    \\  /    \n" +
+                   "     \\/     \n";
         String X = " __   __ \n" +
-                " \\ \\ / / \n" +
-                "  \\ V /  \n" +
-                "   > <   \n" +
-                "  / . \\  \n" +
-                " /_/ \\_\\ \n";
+                   " \\ \\ / / \n" +
+                   "  \\ V /  \n" +
+                   "   > <   \n" +
+                   "  / . \\  \n" +
+                   " /_/ \\_\\ \n";
         String L = "  _       \n" +
-                " | |      \n" +
-                " | |      \n" +
-                " | |      \n" +
-                " | |____  \n" +
-                " |______|  \n";
+                   " | |      \n" +
+                   " | |      \n" +
+                   " | |      \n" +
+                   " | |____  \n" +
+                   " |______| \n";
         String C = "   _____  \n" +
-                "  / ____| \n" +
-                " | |      \n" +
-                " | |      \n" +
-                " | |____  \n" +
-                "  \\_____|  \n";
+                   "  / ____| \n" +
+                   " | |      \n" +
+                   " | |      \n" +
+                   " | |____  \n" +
+                   "  \\_____| \n";
         String D = "  _____   \n" +
-                " |  __ \\  \n" +
-                " | |  | | \n" +
-                " | |  | | \n" +
-                " | |__| | \n" +
-                " |_____/   \n";
+                   " |  __ \\  \n" +
+                   " | |  | | \n" +
+                   " | |  | | \n" +
+                   " | |__| | \n" +
+                   " |_____/  \n";
         String M = "  __  __  \n" +
-                " |  \\/  | \n" +
-                " | \\  / | \n" +
-                " | |\\/| | \n" +
-                " | |  | | \n" +
-                " |_|  |_|  \n";
+                   " |  \\/  | \n" +
+                   " | \\  / | \n" +
+                   " | |\\/| | \n" +
+                   " | |  | | \n" +
+                   " |_|  |_| \n";
 
         assertEquals(I, RomanPrinter.print(1));
         assertEquals(V, RomanPrinter.print(5));
@@ -57,5 +57,11 @@ public class RomanPrinterTest {
         assertEquals(C, RomanPrinter.print(100));
         assertEquals(D, RomanPrinter.print(500));
         assertEquals(M, RomanPrinter.print(1000));
+    }
+
+    //@Ignore
+    @Test
+    public void testPrint_proveVarieTemp() {
+        RomanPrinter.print(990);
     }
 }

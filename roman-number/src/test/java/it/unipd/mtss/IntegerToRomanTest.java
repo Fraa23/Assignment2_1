@@ -27,7 +27,7 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvert_singleDigit() {
+    public void testConvert_singleDigit() throws OutOfRange {
         assertEquals("I", IntegerToRoman.convert(1));
         assertEquals("IV", IntegerToRoman.convert(4));
         assertEquals("V", IntegerToRoman.convert(5));
@@ -35,7 +35,7 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvert_doubleDigit() {
+    public void testConvert_doubleDigit() throws OutOfRange {
         assertEquals("X", IntegerToRoman.convert(10));
         assertEquals("XL", IntegerToRoman.convert(40));
         assertEquals("L", IntegerToRoman.convert(50));
@@ -43,7 +43,7 @@ public class IntegerToRomanTest {
     }
 
     @Test
-    public void testConvert_tripleDigit() {
+    public void testConvert_tripleDigit() throws OutOfRange {
         assertEquals("C", IntegerToRoman.convert(100));
         assertEquals("CD", IntegerToRoman.convert(400));
         assertEquals("D", IntegerToRoman.convert(500));
