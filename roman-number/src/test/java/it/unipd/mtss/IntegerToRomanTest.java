@@ -13,48 +13,42 @@ public class IntegerToRomanTest {
 
     @Test(expected = OutOfRange.class)
     public void testConvert_outOfRange_tooLow() throws OutOfRange {
-        IntegerToRoman converter = new IntegerToRoman();
-        converter.convert(0);
+        IntegerToRoman.convert(0);
     }
 
     @Test(expected = OutOfRange.class)
     public void testConvert_outOfRange_tooHigh() throws OutOfRange {
-        IntegerToRoman converter = new IntegerToRoman();
-        converter.convert(1001);
+        IntegerToRoman.convert(1001);
     }
 
     @Test(expected = OutOfRange.class)
     public void testConvert_outOfRange_negative() throws OutOfRange {
-        IntegerToRoman converter = new IntegerToRoman();
-        converter.convert(-1);
+        IntegerToRoman.convert(-1);
     }
 
     @Test
     public void testConvert_singleDigit() {
-        IntegerToRoman converter = new IntegerToRoman();
-        assertEquals("I", converter.convert(1));
-        assertEquals("IV", converter.convert(4));
-        assertEquals("V", converter.convert(5));
-        assertEquals("IX", converter.convert(9));
+        assertEquals("I", IntegerToRoman.convert(1));
+        assertEquals("IV", IntegerToRoman.convert(4));
+        assertEquals("V", IntegerToRoman.convert(5));
+        assertEquals("IX", IntegerToRoman.convert(9));
     }
 
-    @Test 
+    @Test
     public void testConvert_doubleDigit() {
-        IntegerToRoman converter = new IntegerToRoman();
-        assertEquals("X", converter.convert(10));
-        assertEquals("XL", converter.convert(40));
-        assertEquals("L", converter.convert(50));
-        assertEquals("XC", converter.convert(90));
+        assertEquals("X", IntegerToRoman.convert(10));
+        assertEquals("XL", IntegerToRoman.convert(40));
+        assertEquals("L", IntegerToRoman.convert(50));
+        assertEquals("XC", IntegerToRoman.convert(90));
     }
 
     @Test
     public void testConvert_tripleDigit() {
-        IntegerToRoman converter = new IntegerToRoman();
-        assertEquals("C", converter.convert(100));
-        assertEquals("CD", converter.convert(400));
-        assertEquals("D", converter.convert(500));
-        assertEquals("CM", converter.convert(900));
-        assertEquals("M", converter.convert(1000));
+        assertEquals("C", IntegerToRoman.convert(100));
+        assertEquals("CD", IntegerToRoman.convert(400));
+        assertEquals("D", IntegerToRoman.convert(500));
+        assertEquals("CM", IntegerToRoman.convert(900));
+        assertEquals("M", IntegerToRoman.convert(1000));
     }
 
 }
