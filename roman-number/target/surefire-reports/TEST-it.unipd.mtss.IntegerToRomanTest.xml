@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.AppTest" time="0.08" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="it.unipd.mtss.IntegerToRomanTest" time="0" tests="6" errors="0" skipped="0" failures="6">
   <properties>
     <property name="java.specification.version" value="22"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -61,5 +61,31 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="66.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="it.unipd.mtss.AppTest" time="0"/>
+  <testcase name="testConvert_outOfRange_negative" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="Expected exception: it.unipd.mtss.exception.OutOfRange" type="java.lang.AssertionError">java.lang.AssertionError: Expected exception: it.unipd.mtss.exception.OutOfRange
+</failure>
+  </testcase>
+  <testcase name="testConvert_singleDigit" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="expected:&lt;I&gt; but was:&lt;null&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<I> but was:<null>
+	at it.unipd.mtss.IntegerToRomanTest.testConvert_singleDigit(IntegerToRomanTest.java:35)
+]]></failure>
+  </testcase>
+  <testcase name="testConvert_doubleDigit" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="expected:&lt;X&gt; but was:&lt;null&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<X> but was:<null>
+	at it.unipd.mtss.IntegerToRomanTest.testConvert_doubleDigit(IntegerToRomanTest.java:44)
+]]></failure>
+  </testcase>
+  <testcase name="testConvert_outOfRange_tooLow" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="Expected exception: it.unipd.mtss.exception.OutOfRange" type="java.lang.AssertionError">java.lang.AssertionError: Expected exception: it.unipd.mtss.exception.OutOfRange
+</failure>
+  </testcase>
+  <testcase name="testConvert_outOfRange_tooHigh" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="Expected exception: it.unipd.mtss.exception.OutOfRange" type="java.lang.AssertionError">java.lang.AssertionError: Expected exception: it.unipd.mtss.exception.OutOfRange
+</failure>
+  </testcase>
+  <testcase name="testConvert_tripleDigit" classname="it.unipd.mtss.IntegerToRomanTest" time="0">
+    <failure message="expected:&lt;C&gt; but was:&lt;null&gt;" type="java.lang.AssertionError"><![CDATA[java.lang.AssertionError: expected:<C> but was:<null>
+	at it.unipd.mtss.IntegerToRomanTest.testConvert_tripleDigit(IntegerToRomanTest.java:53)
+]]></failure>
+  </testcase>
 </testsuite>
