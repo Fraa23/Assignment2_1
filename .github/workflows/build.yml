@@ -16,4 +16,4 @@ jobs:
       - name: Build with Maven
         run: 
               cd roman-number
-              mvn -B install --file pom.xml
+              mvn install
