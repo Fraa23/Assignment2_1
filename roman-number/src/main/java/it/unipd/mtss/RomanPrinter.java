@@ -105,7 +105,7 @@ public class RomanPrinter {
 
         String aux_str = "";
         for(int i = 0; i < 6; i++) {
-            aux_str += (aux_mat[i][0] + System.lineSeparator());
+            aux_str += (aux_mat[i][0] + "\n");  //
         }
 
         System.out.println(aux_str);
@@ -115,12 +115,6 @@ public class RomanPrinter {
     private static void concatMatrix(String m1[][], String m2[][]) {
         for(int i = 0; i < 6; i++) {
             m1[i][0] += m2[i][0];
-        }
-    }
-
-    private static void printMatrix(String m[][]) {
-        for(String[] row : m) {
-            System.out.println(Arrays.toString(row));
         }
     }
 }
