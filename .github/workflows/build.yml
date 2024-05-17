@@ -3,6 +3,7 @@ name: Java CI with Maven
 on: [push]
 
 jobs:
+  run: cd roman-number
   build:
     runs-on: ubuntu-latest
     steps:
@@ -14,5 +15,4 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: cd roman-printer
         run: mvn install --file pom.xml
