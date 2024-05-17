@@ -59,9 +59,16 @@ public class RomanPrinterTest {
         assertEquals(M, RomanPrinter.print(1000));
     }
 
-    //@Ignore
     @Test
-    public void testPrint_proveVarieTemp() {
-        RomanPrinter.print(990);
+    public void testPrint_multipleLetters() {
+        String multipleDigits =
+                "   _____    __  __  \n" +
+                        "  / ____|  |  \\/  | \n" +
+                        " | |       | \\  / | \n" +
+                        " | |       | |\\/| | \n" +
+                        " | |____   | |  | | \n" +
+                        "  \\_____|  |_|  |_| \n";
+
+        assertEquals(multipleDigits, RomanPrinter.print(900));
     }
 }
