@@ -14,4 +14,5 @@ jobs:
           distribution: 'temurin'
           cache: maven
       - name: Build with Maven
-        run: mvn install
+        run: cd roman-printer
+        run: mvn install --file pom.xml
