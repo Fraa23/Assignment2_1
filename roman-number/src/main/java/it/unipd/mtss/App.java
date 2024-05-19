@@ -3,4 +3,14 @@
 // Francesco Lapenna 2072134
 ////////////////////////////////////////////////////////////////////
 
-# Assignment2_1
+package it.unipd.mtss;
+
+/**
+ * Hello world!
+ *
+ */
+public class App {
+    public static void main(String[] args) {
+        System.out.println("Hello World!");
+    }
+}

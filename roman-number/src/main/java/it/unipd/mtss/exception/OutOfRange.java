@@ -2,5 +2,7 @@
 // Sara Ristovic 2080101
 // Francesco Lapenna 2072134
 ////////////////////////////////////////////////////////////////////
+package it.unipd.mtss.exception;
 
-# Assignment2_1
+public class OutOfRange extends Exception {
+}
