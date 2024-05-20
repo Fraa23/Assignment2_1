@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>RomanPrinter.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">roman-number</a> &gt; <a href="index.source.html" class="el_package">it.unipd.mtss</a> &gt; <span class="el_source">RomanPrinter.java</span></div><h1>RomanPrinter.java</h1><pre class="source lang-java linenums">////////////////////////////////////////////////////////////////////
+// Sara Ristovic 2080101
+// Francesco Lapenna 2072134
+////////////////////////////////////////////////////////////////////
+
+package it.unipd.mtss;
+
+import it.unipd.mtss.exception.OutOfRange;
+
+import java.util.Arrays;
+
+<span class="nc" id="L12">public class RomanPrinter {</span>
+    public static String print(int num) {
+        try {
+<span class="fc" id="L15">            return printAsciiArt(IntegerToRoman.convert(num));</span>
+        }
+<span class="nc" id="L17">        catch (OutOfRange e) {</span>
+<span class="nc" id="L18">            System.out.println(&quot;Input out of range.&quot;);</span>
+<span class="nc" id="L19">            return null;</span>
+        }
+    }
+
+    private static String printAsciiArt(String romanNumber) {
+<span class="fc" id="L24">        String [][] I = { {&quot;  _____  &quot;},</span>
+                          {&quot; |_   _| &quot;},
+                          {&quot;   | |   &quot;},
+                          {&quot;   | |   &quot;},
+                          {&quot;  _| |_  &quot;},
+                          {&quot; |_____| &quot;} };
+
+<span class="fc" id="L31">        String [][] V = { {&quot; __      __ &quot;},</span>
+                          {&quot; \\ \\    / / &quot;},
+                          {&quot;  \\ \\  / /  &quot;},
+                          {&quot;   \\ \\/ /   &quot;},
+                          {&quot;    \\  /    &quot;},
+                          {&quot;     \\/     &quot;} };
+
+<span class="fc" id="L38">        String [][] X = { {&quot; __   __ &quot;},</span>
+                          {&quot; \\ \\ / / &quot;},
+                          {&quot;  \\ V /  &quot;},
+                          {&quot;   &gt; &lt;   &quot;},
+                          {&quot;  / . \\  &quot;},
+                          {&quot; /_/ \\_\\ &quot;} };
+
+<span class="fc" id="L45">        String [][] L = { {&quot;  _       &quot;},</span>
+                          {&quot; | |      &quot;},
+                          {&quot; | |      &quot;},
+                          {&quot; | |      &quot;},
+                          {&quot; | |____  &quot;},
+                          {&quot; |______| &quot;} };
+
+<span class="fc" id="L52">        String [][] C = { {&quot;   _____  &quot;},</span>
+                          {&quot;  / ____| &quot;},
+                          {&quot; | |      &quot;},
+                          {&quot; | |      &quot;},
+                          {&quot; | |____  &quot;},
+                          {&quot;  \\_____| &quot;} };
+
+<span class="fc" id="L59">        String [][] D = { {&quot;  _____   &quot;},</span>
+                          {&quot; |  __ \\  &quot;},
+                          {&quot; | |  | | &quot;},
+                          {&quot; | |  | | &quot;},
+                          {&quot; | |__| | &quot;},
+                          {&quot; |_____/  &quot;} };
+
+<span class="fc" id="L66">        String [][] M = { {&quot;  __  __  &quot;},</span>
+                          {&quot; |  \\/  | &quot;},
+                          {&quot; | \\  / | &quot;},
+                          {&quot; | |\\/| | &quot;},
+                          {&quot; | |  | | &quot;},
+                          {&quot; |_|  |_| &quot;} };
+
+<span class="fc" id="L73">        String [][] aux_mat = { {&quot;&quot;},</span>
+                                {&quot;&quot;},
+                                {&quot;&quot;},
+                                {&quot;&quot;},
+                                {&quot;&quot;},
+                                {&quot;&quot;} };
+
+<span class="fc bfc" id="L80" title="All 2 branches covered.">        for(int i = 0; i &lt; romanNumber.length(); i++) {</span>
+<span class="fc bfc" id="L81" title="All 2 branches covered.">            if (romanNumber.charAt(i) == 'I') {</span>
+<span class="fc" id="L82">                concatMatrix(aux_mat, I);</span>
+            }
+<span class="fc bfc" id="L84" title="All 2 branches covered.">            else if (romanNumber.charAt(i) == 'V') {</span>
+<span class="fc" id="L85">                concatMatrix(aux_mat, V);</span>
+            }
+<span class="fc bfc" id="L87" title="All 2 branches covered.">            else if (romanNumber.charAt(i) == 'X') {</span>
+<span class="fc" id="L88">                concatMatrix(aux_mat, X);</span>
+            }
+<span class="fc bfc" id="L90" title="All 2 branches covered.">            else if (romanNumber.charAt(i) == 'L') {</span>
+<span class="fc" id="L91">                concatMatrix(aux_mat, L);</span>
+            }
+<span class="fc bfc" id="L93" title="All 2 branches covered.">            else if (romanNumber.charAt(i) == 'C') {</span>
+<span class="fc" id="L94">                concatMatrix(aux_mat, C);</span>
+            }
+<span class="fc bfc" id="L96" title="All 2 branches covered.">            else if (romanNumber.charAt(i) == 'D') {</span>
+<span class="fc" id="L97">                concatMatrix(aux_mat, D);</span>
+            }
+<span class="pc bpc" id="L99" title="1 of 2 branches missed.">            else if (romanNumber.charAt(i) == 'M') {</span>
+<span class="fc" id="L100">                concatMatrix(aux_mat, M);</span>
+            }
+        }
+
+        // String aux_str = Arrays.deepToString(aux_mat);
+
+<span class="fc" id="L106">        String aux_str = &quot;&quot;;</span>
+<span class="fc bfc" id="L107" title="All 2 branches covered.">        for(int i = 0; i &lt; 6; i++) {</span>
+<span class="fc" id="L108">            aux_str += (aux_mat[i][0] + &quot;\n&quot;);  //</span>
+        }
+
+<span class="fc" id="L111">        System.out.println(aux_str);</span>
+<span class="fc" id="L112">        return aux_str;</span>
+    }
+
+    private static void concatMatrix(String m1[][], String m2[][]) {
+<span class="fc bfc" id="L116" title="All 2 branches covered.">        for(int i = 0; i &lt; 6; i++) {</span>
+<span class="fc" id="L117">            m1[i][0] += m2[i][0];</span>
+        }
+<span class="fc" id="L119">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.11.202310140853</span></div></body></html>

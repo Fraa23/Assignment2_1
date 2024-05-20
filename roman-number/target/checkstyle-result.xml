@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="9.3">
+<file name="/home/francesco/Desktop/Assignment2_1/roman-number/src/main/java/it/unipd/mtss/exception/OutOfRange.java">
+</file>
+<file name="/home/francesco/Desktop/Assignment2_1/roman-number/src/main/java/it/unipd/mtss/IntegerToRoman.java">
+</file>
+<file name="/home/francesco/Desktop/Assignment2_1/roman-number/src/main/java/it/unipd/mtss/RomanPrinter.java">
+</file>
+<file name="/home/francesco/Desktop/Assignment2_1/roman-number/src/main/java/it/unipd/mtss/App.java">
+</file>
+</checkstyle>
