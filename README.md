@@ -1,13 +1,14 @@
-////////////////////////////////////////////////////////////////////
-// Sara Ristovic 2080101
-// Francesco Lapenna 2072134
+////////////////////////////////////////////////////////////////////\
+// Sara Ristovic 2080101\
+// Francesco Lapenna 2072134\
 ////////////////////////////////////////////////////////////////////
 
-*** ANALISI STATICA e CODE COVERAGE del codice ***
-Codice Java e' stato controllato dai plugin checkstyle e compila correttamente.
-Code coverage e' del 96% (il report si trova dentro: roman-number/target/site/jacoco/index.html)
+# *** ANALISI STATICA e CODE COVERAGE del codice ***
+Il codice Java e' stato controllato dai plugin checkstyle e compila correttamente.
+Il code coverage e' del 96% (il report si trova dentro: roman-number/target/site/jacoco/index.html)
 
-*** IL RISULTATO DEL PROCESSO DI BUILD ***
+# *** RISULTATO DEL PROCESSO DI BUILD ***
+``` console
 [INFO] Scanning for projects...
 [INFO]
 [INFO] ---------------------< it.unipd.mtss:roman-number >---------------------
@@ -127,7 +128,8 @@ Audit done.
 [INFO] ------------------------------------------------------------------------
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
+
 [INFO] Total time:  3.887 s
 [INFO] Finished at: 2024-05-19T23:17:55+02:00
 [INFO] ------------------------------------------------------------------------
-
+```
